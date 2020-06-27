@@ -1,0 +1,208 @@
+package com.nukkitx.blockstateupdater.util.tagupdater;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.regex.Pattern;
+
+public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
+
+    private static final Predicate<CompoundTagEditHelper> COMPOUND_FILTER = helper -> helper.getTag() instanceof Map;
+
+    private final Builder builder = new Builder();
+    private final List<Predicate<CompoundTagEditHelper>> filters = new ArrayList<>();
+    private final List<Consumer<CompoundTagEditHelper>> updaters = new ArrayList<>();
+    private final int version;
+
+    public CompoundTagUpdater(int version) {
+        this.version = version;
+    }
+
+    private static String getTagValue(Object tag) {
+        if (tag == null) {
+            return "END";
+        } else if (tag instanceof Byte || tag instanceof Short || tag instanceof Integer || tag instanceof Long ||
+                tag instanceof Float || tag instanceof Double) {
+            return String.valueOf(tag);
+        } else if (tag instanceof String) {
+            return (String) tag;
+        }
+        throw new IllegalArgumentException("Invalid tag");
+    }
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void update(Map<String, Object> tag) {
+        CompoundTagEditHelper filterHelper = new CompoundTagEditHelper(tag);
+        for (Predicate<CompoundTagEditHelper> filter : this.filters) {
+            if (!filter.test(filterHelper)) {
+                return;
+            }
+        }
+
+        CompoundTagEditHelper updaterHelper = new CompoundTagEditHelper(tag);
+        for (Consumer<CompoundTagEditHelper> updater : this.updaters) {
+            updater.accept(updaterHelper);
+        }
+    }
+
+    Builder builder() {
+        return builder;
+    }
+
+    @Override
+    public int compareTo(CompoundTagUpdater o) {
+        return Integer.compare(this.getVersion(), o.getVersion());
+    }
+
+    private static class TagNamePredicate implements Predicate<CompoundTagEditHelper> {
+        private final String name;
+
+        private TagNamePredicate(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public boolean test(CompoundTagEditHelper helper) {
+            Object tag = helper.getTag();
+            return tag instanceof Map && ((Map<String, Object>) tag).containsKey(name);
+        }
+    }
+
+    private static class TryAddPredicate implements Predicate<CompoundTagEditHelper> {
+        private final String name;
+
+        private TryAddPredicate(String name) {
+            this.name = name;
+        }
+
+        @Override
+        public boolean test(CompoundTagEditHelper helper) {
+            Object tag = helper.getTag();
+            return tag instanceof Map && !((Map<String, Object>) tag).containsKey(name);
+        }
+    }
+
+    public class Builder {
+
+        public Builder addByte(String name, byte value) {
+            CompoundTagUpdater.this.filters.add(COMPOUND_FILTER);
+            CompoundTagUpdater.this.updaters.add(helper -> helper.getCompoundTag().put(name, value));
+            return this;
+        }
+
+        public Builder tryAddInt(String name, int value) {
+            CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
+            CompoundTagUpdater.this.updaters.add(helper -> helper.getCompoundTag().put(name, value));
+            return this;
+        }
+
+        public Builder addInt(String name, int value) {
+            CompoundTagUpdater.this.filters.add(COMPOUND_FILTER);
+            CompoundTagUpdater.this.updaters.add(helper -> helper.getCompoundTag().put(name, value));
+            return this;
+        }
+
+        public Builder addCompound(String name) {
+            CompoundTagUpdater.this.filters.add(COMPOUND_FILTER);
+            CompoundTagUpdater.this.updaters.add(helper -> helper.getCompoundTag().put(name, new LinkedHashMap<>()));
+            return this;
+        }
+
+        public Builder edit(String name, Consumer<CompoundTagEditHelper> function) {
+            CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
+            CompoundTagUpdater.this.updaters.add(helper -> helper.pushChild(name));
+            CompoundTagUpdater.this.updaters.add(function);
+            CompoundTagUpdater.this.updaters.add(CompoundTagEditHelper::popChild);
+            return this;
+        }
+
+        public Builder match(String name, String regex) {
+            Pattern pattern = Pattern.compile(regex);
+            CompoundTagUpdater.this.filters.add(helper -> {
+                Object tag = helper.getTag();
+                if (!(tag instanceof Map)) {
+                    return false;
+                }
+                Map<String, Object> compound = (Map<String, Object>) tag;
+                if (!compound.containsKey(name)) {
+                    return false;
+                }
+
+                boolean match = regex.isEmpty();
+                if (!match) {
+                    Object matchTag = compound.get(name);
+                    match = pattern.matcher(getTagValue(matchTag)).matches();
+                }
+                return match;
+            });
+            return this;
+        }
+
+        public Builder popVisit() {
+            CompoundTagUpdater.this.filters.add(helper -> {
+                if (helper.canPopChild()) {
+                    helper.popChild();
+                    return true;
+                }
+                return false;
+            });
+            CompoundTagUpdater.this.updaters.add(CompoundTagEditHelper::popChild);
+            return this;
+        }
+
+        public Builder remove(String name) {
+            CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
+            CompoundTagUpdater.this.updaters.add(helper -> {
+                helper.getCompoundTag().remove(name);
+            });
+            return this;
+        }
+
+        public Builder rename(String from, String to) {
+            CompoundTagUpdater.this.filters.add(new TryAddPredicate(from));
+            CompoundTagUpdater.this.updaters.add(helper -> {
+                Map<String, Object> tag = helper.getCompoundTag();
+                tag.put(to, tag.remove(from));
+            });
+            return this;
+        }
+
+        public Builder tryEdit(String name, Consumer<CompoundTagEditHelper> function) {
+            CompoundTagUpdater.this.updaters.add(helper -> {
+                Object tag = helper.getTag();
+                if (tag instanceof Map) {
+                    Map<String, Object> compoundTag = (Map<String, Object>) tag;
+                    if (compoundTag.containsKey(name)) {
+                        helper.pushChild(name);
+                        function.accept(helper);
+                        helper.popChild();
+                    }
+                }
+            });
+            return this;
+        }
+
+        public Builder visit(String name) {
+            CompoundTagUpdater.this.filters.add(helper -> {
+                Object tag = helper.getTag();
+                if (tag instanceof Map && ((Map<String, Object>) tag).containsKey(name)) {
+                    helper.pushChild(name);
+                    return true;
+                }
+                return false;
+            });
+            CompoundTagUpdater.this.updaters.add(helper -> helper.pushChild(name));
+            return this;
+        }
+
+        public CompoundTagUpdater build() {
+            return CompoundTagUpdater.this;
+        }
+    }
+}
