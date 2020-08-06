@@ -57,7 +57,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
 
     @Override
     public int compareTo(CompoundTagUpdater o) {
-        return Integer.compare(this.getVersion(), o.getVersion());
+        return Integer.compare(this.version, o.version);
     }
 
     private static class TagNamePredicate implements Predicate<CompoundTagEditHelper> {

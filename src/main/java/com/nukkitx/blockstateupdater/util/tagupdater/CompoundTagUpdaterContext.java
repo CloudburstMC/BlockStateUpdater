@@ -3,14 +3,13 @@ package com.nukkitx.blockstateupdater.util.tagupdater;
 import com.nukkitx.blockstateupdater.util.TagUtils;
 import com.nukkitx.nbt.NbtMap;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Comparator;
 import java.util.Map;
+import java.util.PriorityQueue;
 
 public class CompoundTagUpdaterContext {
 
-    private final List<CompoundTagUpdater> updaters = new ArrayList<>();
-    private int updaterVersion = 0;
+    private final PriorityQueue<CompoundTagUpdater> updaters = new PriorityQueue<>(Comparator.reverseOrder());
 
     private static int mergeVersions(int baseVersion, int updaterVersion) {
         return updaterVersion | baseVersion;
@@ -20,27 +19,28 @@ public class CompoundTagUpdaterContext {
         return version & 0xFFFFFF00;
     }
 
+    public static int updaterVersion(int version) {
+        return version & 0x000000FF;
+    }
+
     public static int makeVersion(int major, int minor, int patch) {
         return (patch << 8) | (minor << 16) | (major << 24);
     }
 
     public CompoundTagUpdater.Builder addUpdater(int major, int minor, int patch) {
         int version = makeVersion(major, minor, patch);
-        if (this.updaters.isEmpty() || this.updaters.get(this.updaters.size() - 1).getVersion() == version) {
-            this.updaterVersion++;
+        CompoundTagUpdater prevUpdater = this.updaters.peek();
+
+        int updaterVersion;
+        if (prevUpdater == null || baseVersion(prevUpdater.getVersion()) != version) {
+            updaterVersion = 0;
         } else {
-            this.updaterVersion = 0;
+            updaterVersion = updaterVersion(prevUpdater.getVersion()) + 1;
         }
-        version = mergeVersions(version, this.updaterVersion);
+        version = mergeVersions(version, updaterVersion);
 
-        int baseVersion = baseVersion(version);
-        if (!this.updaters.isEmpty()) {
-            baseVersion = baseVersion(this.updaters.get(this.updaters.size() - 1).getVersion());
-        }
-
-        CompoundTagUpdater updater = new CompoundTagUpdater(baseVersion);
-        this.updaters.add(updater);
-        this.updaters.sort(null);
+        CompoundTagUpdater updater = new CompoundTagUpdater(version);
+        this.updaters.offer(updater);
         return updater.builder();
     }
 
@@ -57,9 +57,7 @@ public class CompoundTagUpdaterContext {
     }
 
     public int getLatestVersion() {
-        if (this.updaters.isEmpty()) {
-            return 0;
-        }
-        return this.updaters.get(updaters.size() - 1).getVersion();
+        CompoundTagUpdater updater = this.updaters.peek();
+        return updater == null ? 0 : updater.getVersion();
     }
 }

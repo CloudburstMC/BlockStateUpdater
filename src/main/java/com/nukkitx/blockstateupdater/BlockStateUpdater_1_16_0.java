@@ -8,6 +8,20 @@ import lombok.RequiredArgsConstructor;
 public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
     public static final BlockStateUpdater INSTANCE = new BlockStateUpdater_1_16_0();
 
+    private static int convertFacingDirectionToDirection(int facingDirection) {
+        switch (facingDirection) {
+            case 2:
+                return 2;
+            case 3:
+            default:
+                return 0;
+            case 4:
+                return 1;
+            case 5:
+                return 3;
+        }
+    }
+
     @Override
     public void registerUpdaters(CompoundTagUpdaterContext context) {
         context.addUpdater(1, 16, 0)
@@ -81,15 +95,28 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
                     helper.replaceWith("name", "minecraft:twisted_vines");
                 });
 
-        this.addWallUpdaters(context, "minecraft:blackstone_wall");
-        this.addWallUpdaters(context, "minecraft:polished_blackstone_brick_wall");
-        this.addWallUpdaters(context, "minecraft:polished_blackstone_wall");
+        this.addWallUpdater(context, "minecraft:blackstone_wall");
+        this.addWallUpdater(context, "minecraft:polished_blackstone_brick_wall");
+        this.addWallUpdater(context, "minecraft:polished_blackstone_wall");
+
+        this.addBeeHiveUpdater(context, "beehive");
+        this.addBeeHiveUpdater(context, "bee_nest");
     }
 
-    private void addWallUpdaters(CompoundTagUpdaterContext context, String name) {
+    private void addWallUpdater(CompoundTagUpdaterContext context, String name) {
         context.addUpdater(1, 16, 0)
                 .match("name", name)
                 .visit("states")
                 .remove("wall_block_type");
+    }
+
+    private void addBeeHiveUpdater(CompoundTagUpdaterContext context, String name) {
+        context.addUpdater(1, 16, 0)
+                .match("name", name)
+                .visit("states")
+                .edit("facing_direction", helper -> {
+                    int facingDirection = (int) helper.getTag();
+                    helper.replaceWith("direction", convertFacingDirectionToDirection(facingDirection));
+                });
     }
 }
