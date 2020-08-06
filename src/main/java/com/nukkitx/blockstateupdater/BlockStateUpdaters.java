@@ -5,10 +5,13 @@ import com.nukkitx.nbt.NbtMap;
 import lombok.experimental.UtilityClass;
 
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @UtilityClass
 public class BlockStateUpdaters {
+
+    public static final int LATEST_VERSION = CompoundTagUpdaterContext.makeVersion(1, 16, 0);
 
     private static final Set<BlockStateUpdater> UPDATERS = new HashSet<>();
     private static final CompoundTagUpdaterContext CONTEXT = new CompoundTagUpdaterContext();
@@ -27,5 +30,10 @@ public class BlockStateUpdaters {
 
     public static NbtMap updateBlockState(NbtMap tag, int version) {
         return CONTEXT.update(tag, version);
+    }
+
+    public static void serializeCommon(Map<String, Object> builder, String id) {
+        builder.put("version", LATEST_VERSION);
+        builder.put("name", id);
     }
 }

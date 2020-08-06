@@ -9,7 +9,6 @@ import java.util.Map;
 
 public class CompoundTagUpdaterContext {
 
-    private static final int LATEST_VERSION = makeVersion(1, 15, 0);
     private final List<CompoundTagUpdater> updaters = new ArrayList<>();
     private int updaterVersion = 0;
 
@@ -21,13 +20,8 @@ public class CompoundTagUpdaterContext {
         return version & 0xFFFFFF00;
     }
 
-    public static void serializeCommon(Map<String, Object> builder, String id) {
-        builder.put("version", LATEST_VERSION);
-        builder.put("name", id);
-    }
-
     public static int makeVersion(int major, int minor, int patch) {
-        return (patch << 8) | (minor << 16) | (major << 26);
+        return (patch << 8) | (minor << 16) | (major << 24);
     }
 
     public CompoundTagUpdater.Builder addUpdater(int major, int minor, int patch) {
