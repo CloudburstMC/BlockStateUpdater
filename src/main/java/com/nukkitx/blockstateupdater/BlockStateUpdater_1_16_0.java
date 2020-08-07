@@ -99,8 +99,9 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
         this.addWallUpdater(context, "minecraft:polished_blackstone_brick_wall");
         this.addWallUpdater(context, "minecraft:polished_blackstone_wall");
 
-        this.addBeeHiveUpdater(context, "beehive");
-        this.addBeeHiveUpdater(context, "bee_nest");
+        // FIXME: These are for 1.16.20. Uncomment them for that version
+//        this.addBeeHiveUpdater(context, "beehive");
+//        this.addBeeHiveUpdater(context, "bee_nest");
     }
 
     private void addWallUpdater(CompoundTagUpdaterContext context, String name) {
