@@ -16,6 +16,7 @@ import java.util.Map;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class BlockStateUpdaterBase implements BlockStateUpdater {
     public static final BlockStateUpdater INSTANCE = new BlockStateUpdaterBase();
+
     public static final Map<String, Map<String, Object>[]> LEGACY_BLOCK_DATA_MAP = new HashMap<>();
     private static final ObjectMapper JSON_MAPPER = new ObjectMapper();
 
@@ -74,17 +75,14 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
                 .match("val", "[0-9]+")
                 .addCompound("states")
                 .tryEdit("states", helper -> {
-                    Map<String, Object> tag = helper.getParent();
-                    String id = (String) tag.get("name");
-                    short val = (short) tag.get("val");
+                    Map<String, Object> tag = helper.getCompoundTag();
+                    Map<String, Object> parent = helper.getParent();
+                    String id = (String) parent.get("name");
+                    short val = (short) parent.get("val");
                     Map<String, Object>[] statesArray = LEGACY_BLOCK_DATA_MAP.get(id);
-                    Map<String, Object> states;
-                    if (statesArray == null) {
-                        states = new LinkedHashMap<>();
-                    } else {
-                        states = new LinkedHashMap<>(statesArray[val]);
+                    if (statesArray != null) {
+                        tag.putAll(statesArray[val]);
                     }
-                    helper.replaceWith("states", states);
                 })
                 .remove("val");
     }

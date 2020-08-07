@@ -115,7 +115,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
         }
 
         public Builder edit(String name, Consumer<CompoundTagEditHelper> function) {
-            CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
+            CompoundTagUpdater.this.filters.add(new TagNamePredicate(name));
             CompoundTagUpdater.this.updaters.add(helper -> helper.pushChild(name));
             CompoundTagUpdater.this.updaters.add(function);
             CompoundTagUpdater.this.updaters.add(CompoundTagEditHelper::popChild);
@@ -157,7 +157,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
         }
 
         public Builder remove(String name) {
-            CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
+            CompoundTagUpdater.this.filters.add(new TagNamePredicate(name));
             CompoundTagUpdater.this.updaters.add(helper -> {
                 helper.getCompoundTag().remove(name);
             });
@@ -165,7 +165,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
         }
 
         public Builder rename(String from, String to) {
-            CompoundTagUpdater.this.filters.add(new TryAddPredicate(from));
+            CompoundTagUpdater.this.filters.add(new TagNamePredicate(from));
             CompoundTagUpdater.this.updaters.add(helper -> {
                 Map<String, Object> tag = helper.getCompoundTag();
                 tag.put(to, tag.remove(from));

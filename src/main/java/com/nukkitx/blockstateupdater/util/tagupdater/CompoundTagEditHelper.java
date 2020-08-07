@@ -1,8 +1,5 @@
 package com.nukkitx.blockstateupdater.util.tagupdater;
 
-import com.nukkitx.nbt.NbtMap;
-import com.nukkitx.nbt.NbtMapBuilder;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
@@ -65,17 +62,14 @@ public class CompoundTagEditHelper {
     public void replaceWith(String name, Object newTag) {
         this.tag = newTag;
         if (this.parentTag.isEmpty()) {
-            this.rootTag = ((NbtMap) tag).toBuilder();
+            this.rootTag = ((Map<String, Object>) tag);
             return;
         }
         Object tag = this.parentTag.getLast();
-        if (tag instanceof NbtMap) {
-            this.parentTag.removeLast();
-            NbtMap parentTag = (NbtMap) tag;
-            NbtMapBuilder newParent = parentTag.toBuilder();
-            newParent.remove(this.tagName.pollLast());
-            newParent.put(name, newTag);
-            this.parentTag.offerLast(newParent);
+        if (tag instanceof Map) {
+            Map<String, Object> map = (Map<String, Object>) tag;
+            map.remove(this.tagName.pollLast());
+            map.put(name, newTag);
             this.tagName.offerLast(name);
         }
     }

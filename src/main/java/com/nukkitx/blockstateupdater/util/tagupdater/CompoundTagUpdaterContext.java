@@ -3,13 +3,13 @@ package com.nukkitx.blockstateupdater.util.tagupdater;
 import com.nukkitx.blockstateupdater.util.TagUtils;
 import com.nukkitx.nbt.NbtMap;
 
-import java.util.Comparator;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 
 public class CompoundTagUpdaterContext {
 
-    private final PriorityQueue<CompoundTagUpdater> updaters = new PriorityQueue<>(Comparator.reverseOrder());
+    private final List<CompoundTagUpdater> updaters = new ArrayList<>();
 
     private static int mergeVersions(int baseVersion, int updaterVersion) {
         return updaterVersion | baseVersion;
@@ -29,7 +29,7 @@ public class CompoundTagUpdaterContext {
 
     public CompoundTagUpdater.Builder addUpdater(int major, int minor, int patch) {
         int version = makeVersion(major, minor, patch);
-        CompoundTagUpdater prevUpdater = this.updaters.peek();
+        CompoundTagUpdater prevUpdater = this.getLatestUpdater();
 
         int updaterVersion;
         if (prevUpdater == null || baseVersion(prevUpdater.getVersion()) != version) {
@@ -40,7 +40,8 @@ public class CompoundTagUpdaterContext {
         version = mergeVersions(version, updaterVersion);
 
         CompoundTagUpdater updater = new CompoundTagUpdater(version);
-        this.updaters.offer(updater);
+        this.updaters.add(updater);
+        this.updaters.sort(null);
         return updater.builder();
     }
 
@@ -53,11 +54,16 @@ public class CompoundTagUpdaterContext {
             }
             updater.update(mutableTag);
         }
+        mutableTag.put("version", this.getLatestVersion());
         return (NbtMap) TagUtils.toImmutable(mutableTag);
     }
 
+    private CompoundTagUpdater getLatestUpdater() {
+        return this.updaters.isEmpty() ? null : this.updaters.get(this.updaters.size() - 1);
+    }
+
     public int getLatestVersion() {
-        CompoundTagUpdater updater = this.updaters.peek();
+        CompoundTagUpdater updater = this.getLatestUpdater();
         return updater == null ? 0 : updater.getVersion();
     }
 }

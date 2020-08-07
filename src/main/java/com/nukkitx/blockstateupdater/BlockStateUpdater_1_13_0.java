@@ -21,7 +21,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                 .rename("new_log_type", "wood_type")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value]);
+                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 2]);
                 })
                 .addByte("stripped_bit", (byte) 0)
                 .edit("name", helper -> {
@@ -35,7 +35,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                 .visit("states")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value]);
+                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 2]);
                 });
     }
 
