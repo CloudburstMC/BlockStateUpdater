@@ -6,7 +6,7 @@
 
     <groupId>com.nukkitx</groupId>
     <artifactId>block-state-updater</artifactId>
-    <version>1.16.0.7</version>
+    <version>1.16.0.8</version>
     <name>BlockStateUpdater</name>
     <description>Updates Minecraft: Bedrock Edition block states to the latest revision</description>
     <inceptionYear>2020</inceptionYear>

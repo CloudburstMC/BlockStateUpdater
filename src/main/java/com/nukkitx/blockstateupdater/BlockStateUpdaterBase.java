@@ -93,7 +93,7 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
                 .match("name", "minecraft:.+_wall$")
                 .tryEdit("states", helper -> {
                     Map<String, Object> states = helper.getCompoundTag();
-                    states.put("post_bit", (byte) 0);
+                    states.put("wall_post_bit", (byte) 0);
                     states.put("wall_connection_type_north", "none");
                     states.put("wall_connection_type_east", "none");
                     states.put("wall_connection_type_south", "none");
