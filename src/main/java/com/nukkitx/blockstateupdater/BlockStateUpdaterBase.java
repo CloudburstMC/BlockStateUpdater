@@ -85,5 +85,19 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
                     }
                 })
                 .remove("val");
+
+        // This is not a vanilla state updater. In vanilla 1.16, the invalid block state is updated when the chunk is
+        // loaded in so it can generate the connection data however the state set below should never occur naturally.
+        // Checking for this block state instead means we don't have to break our loading system in order to support it.
+        context.addUpdater(0, 0, 0)
+                .match("name", "minecraft:.+_wall$")
+                .tryEdit("states", helper -> {
+                    Map<String, Object> states = helper.getCompoundTag();
+                    states.put("post_bit", (byte) 0);
+                    states.put("wall_connection_type_north", "none");
+                    states.put("wall_connection_type_east", "none");
+                    states.put("wall_connection_type_south", "none");
+                    states.put("wall_connection_type_west", "none");
+                });
     }
 }
