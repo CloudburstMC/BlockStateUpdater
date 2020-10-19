@@ -81,6 +81,7 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
                     short val = (short) parent.get("val");
                     Map<String, Object>[] statesArray = LEGACY_BLOCK_DATA_MAP.get(id);
                     if (statesArray != null) {
+                        if (val >= statesArray.length) val = 0;
                         tag.putAll(statesArray[val]);
                     }
                 })
