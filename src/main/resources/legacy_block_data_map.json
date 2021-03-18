@@ -6853,6 +6853,17 @@
       "color": "black"
     }
   ],
+  "minecraft:chain": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
+    }
+  ],
   "minecraft:chain_command_block": [
     {
       "facing_direction": 0,
@@ -12778,6 +12789,14 @@
     }
   ],
   "minecraft:lantern": [
+    {
+      "hanging": false
+    },
+    {
+      "hanging": true
+    }
+  ],
+  "minecraft:soul_lantern": [
     {
       "hanging": false
     },
