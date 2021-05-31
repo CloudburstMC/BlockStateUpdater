@@ -88,6 +88,16 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", "minecraft:.+")
                 .visit("states")
+                .edit("facing_direction", helper -> {
+                    int value = (int) helper.getTag();
+                    if (value >= 7) {
+                        helper.replaceWith("facing_direction", 6);
+                    }
+                });
+
+        context.addUpdater(1, 13, 0)
+                .match("name", "minecraft:.+")
+                .visit("states")
                 .edit("fill_level", helper -> {
                     int value = (int) helper.getTag();
                     if (value < 0) value = 0;
