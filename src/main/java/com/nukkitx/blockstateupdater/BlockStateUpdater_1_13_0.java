@@ -17,7 +17,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", name)
                 .visit("states")
-                .match("direction", "[3]")
+                .match("direction", "[0-3]")
                 .rename("new_log_type", "wood_type")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
