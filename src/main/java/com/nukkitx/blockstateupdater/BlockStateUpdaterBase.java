@@ -90,8 +90,13 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
         // This is not a vanilla state updater. In vanilla 1.16, the invalid block state is updated when the chunk is
         // loaded in so it can generate the connection data however the state set below should never occur naturally.
         // Checking for this block state instead means we don't have to break our loading system in order to support it.
+        addWallUpdater(context, "minecraft:.+_wall");
+        addWallUpdater(context, "minecraft:border_block");
+    }
+
+    private static void addWallUpdater(CompoundTagUpdaterContext context, String name) {
         context.addUpdater(0, 0, 0)
-                .match("name", "minecraft:.+_wall$")
+                .match("name", name)
                 .tryEdit("states", helper -> {
                     Map<String, Object> states = helper.getCompoundTag();
                     states.put("wall_post_bit", (byte) 0);
