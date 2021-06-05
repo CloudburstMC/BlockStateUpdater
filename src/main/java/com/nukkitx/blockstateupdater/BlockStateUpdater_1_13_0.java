@@ -17,11 +17,11 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", name)
                 .visit("states")
-                .match("direction", "[0-3]")
+                .match("direction", "[3]")
                 .rename("new_log_type", "wood_type")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 2]);
+                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
                 })
                 .addByte("stripped_bit", (byte) 0)
                 .edit("name", helper -> {
@@ -35,8 +35,9 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                 .visit("states")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 2]);
-                });
+                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
+                })
+                .tryAdd("pillar_axis", PILLAR_DIRECTION[0]);
     }
 
     @Override

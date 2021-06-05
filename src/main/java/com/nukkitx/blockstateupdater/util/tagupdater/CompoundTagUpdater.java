@@ -96,7 +96,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
             return this;
         }
 
-        public Builder tryAddInt(String name, int value) {
+        public Builder tryAdd(String name, Object value) {
             CompoundTagUpdater.this.filters.add(new TryAddPredicate(name));
             CompoundTagUpdater.this.updaters.add(helper -> helper.getCompoundTag().put(name, value));
             return this;

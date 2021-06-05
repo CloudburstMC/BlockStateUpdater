@@ -27,7 +27,7 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
         context.addUpdater(1, 16, 0)
                 .match("name", "jigsaw")
                 .visit("states")
-                .tryAddInt("rotation", 0);
+                .tryAdd("rotation", 0);
 
         context.addUpdater(1, 16, 0)
                 .match("name", "minecraft:blue_fire")

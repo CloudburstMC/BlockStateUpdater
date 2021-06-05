@@ -48,5 +48,14 @@ public class BlockStateUpdater_1_14_0 implements BlockStateUpdater {
         addRailUpdater("minecraft:golden_rail", context);
         addRailUpdater("minecraft:detector_rail", context);
         addRailUpdater("minecraft:activator_rail", context);
+
+        context.addUpdater(1, 14, 0)
+                .match("name", "minecraft:rail")
+                .visit("states")
+                .edit("rail_direction", helper -> {
+                    int direction = (int) helper.getTag();
+                    if (direction > 9) direction = 0;
+                    helper.replaceWith("rail_direction", direction);
+                });
     }
 }
