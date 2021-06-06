@@ -1797,12 +1797,26 @@
     },
     {
       "facing_direction": 5
+    }
+  ],
+  "minecraft:stickyPistonArmCollision": [
+    {
+      "facing_direction": 0
     },
     {
-      "facing_direction": 6
+      "facing_direction": 1
     },
     {
-      "facing_direction": 7
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
     }
   ],
   "minecraft:bed": [

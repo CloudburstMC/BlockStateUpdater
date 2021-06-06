@@ -1,5 +1,6 @@
 package com.nukkitx.blockstateupdater;
 
+import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdater;
 import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -101,6 +102,9 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
 
         this.addBeeHiveUpdater(context, "minecraft:beehive");
         this.addBeeHiveUpdater(context, "minecraft:bee_nest");
+
+        this.addRequiredValueUpdater(context, "minecraft:pumpkin_stem", "facing_direction", 0);
+        this.addRequiredValueUpdater(context, "minecraft:melon_stem", "facing_direction", 0);
     }
 
     private void addWallUpdater(CompoundTagUpdaterContext context, String name) {
@@ -118,5 +122,12 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
                     int facingDirection = (int) helper.getTag();
                     helper.replaceWith("direction", convertFacingDirectionToDirection(facingDirection));
                 });
+    }
+
+    private void addRequiredValueUpdater(CompoundTagUpdaterContext contex, String name, String state, Object value) {
+        contex.addUpdater(1, 16, 0)
+                .match("name", name)
+                .visit("states")
+                .tryAdd(state, value);
     }
 }
