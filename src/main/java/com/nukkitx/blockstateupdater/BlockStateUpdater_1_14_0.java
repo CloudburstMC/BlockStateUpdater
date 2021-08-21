@@ -20,6 +20,17 @@ public class BlockStateUpdater_1_14_0 implements BlockStateUpdater {
                 });
     }
 
+    public static void addMaxStateUpdater(String name, String state, int maxValue, CompoundTagUpdaterContext context) {
+        context.addUpdater(1, 14, 0)
+                .match("name", name)
+                .visit("states")
+                .edit(state, helper -> {
+                    int value = (int) helper.getTag();
+                    if (value > maxValue) value = maxValue;
+                    helper.replaceWith(state, value);
+                });
+    }
+
     private static int convertWeirdoDirectionToFacing(int weirdoDirection) {
         switch (weirdoDirection) {
             case 0:
@@ -49,13 +60,10 @@ public class BlockStateUpdater_1_14_0 implements BlockStateUpdater {
         addRailUpdater("minecraft:detector_rail", context);
         addRailUpdater("minecraft:activator_rail", context);
 
-        context.addUpdater(1, 14, 0)
-                .match("name", "minecraft:rail")
-                .visit("states")
-                .edit("rail_direction", helper -> {
-                    int direction = (int) helper.getTag();
-                    if (direction > 9) direction = 0;
-                    helper.replaceWith("rail_direction", direction);
-                });
+        addMaxStateUpdater("minecraft:rail", "rail_direction", 9, context);
+        addMaxStateUpdater("minecraft:cake", "bite_counter", 6, context);
+        addMaxStateUpdater("minecraft:chorus_flower", "age", 5, context);
+        addMaxStateUpdater("minecraft:cocoa", "age", 2, context);
+        addMaxStateUpdater("minecraft:composter", "composter_fill_level", 8, context);
     }
 }

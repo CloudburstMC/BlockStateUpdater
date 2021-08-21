@@ -13,17 +13,27 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
             {"down_east_west", "east", "west", "south", "north", "up_north_south", "up_east_west", "down_north_south"};
     private static final String[] PILLAR_DIRECTION = {"y", "x", "z"};
 
-    private static void registerLogUpdater(String name, CompoundTagUpdaterContext context) {
+    private static void registerLogUpdater(String name, String replace, CompoundTagUpdaterContext context) {
+        context.addUpdater(1, 13, 0)
+                .match("name", name)
+                .visit("states")
+                .match("direction", "[0-2]")
+                .edit("direction", helper -> {
+                    int value = (int) helper.getTag();
+                    helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
+                });
+
         context.addUpdater(1, 13, 0)
                 .match("name", name)
                 .visit("states")
                 .match("direction", "[3]")
-                .rename("new_log_type", "wood_type")
+                .rename(replace, "wood_type")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
                     helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
                 })
                 .addByte("stripped_bit", (byte) 0)
+                .popVisit()
                 .edit("name", helper -> {
                     helper.replaceWith("name", "minecraft:wood");
                 });
@@ -36,7 +46,11 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
                     helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
-                })
+                });
+
+        context.addUpdater(1, 13, 0)
+                .match("name", name)
+                .visit("states")
                 .tryAdd("pillar_axis", PILLAR_DIRECTION[0]);
     }
 
@@ -50,8 +64,8 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                     helper.replaceWith("lever_direction", LEVER_DIRECTIONS[value]);
                 });
 
-        registerLogUpdater("minecraft:log", context);
-        registerLogUpdater("minecraft:log2", context);
+        registerLogUpdater("minecraft:log", "old_log_type", context);
+        registerLogUpdater("minecraft:log2", "new_log_type", context);
 
         registerPillarUpdater("minecraft:log", context);
         registerPillarUpdater("minecraft:quartz_block", context);

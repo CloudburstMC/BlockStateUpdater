@@ -1797,12 +1797,26 @@
     },
     {
       "facing_direction": 5
+    }
+  ],
+  "minecraft:stickyPistonArmCollision": [
+    {
+      "facing_direction": 0
     },
     {
-      "facing_direction": 6
+      "facing_direction": 1
     },
     {
-      "facing_direction": 7
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
     }
   ],
   "minecraft:bed": [
@@ -13161,24 +13175,30 @@
   ],
   "minecraft:stripped_warped_stem": [
     {
-      "pillar_axis": "y"
+      "pillar_axis": "y",
+      "deprecated": 0
     },
     {
-      "pillar_axis": "x"
+      "pillar_axis": "x",
+      "deprecated": 0
     },
     {
-      "pillar_axis": "z"
+      "pillar_axis": "z",
+      "deprecated": 0
     }
   ],
   "minecraft:stripped_crimson_stem": [
     {
-      "pillar_axis": "y"
+      "pillar_axis": "y",
+      "deprecated": 0
     },
     {
-      "pillar_axis": "x"
+      "pillar_axis": "x",
+      "deprecated": 0
     },
     {
-      "pillar_axis": "z"
+      "pillar_axis": "z",
+      "deprecated": 0
     }
   ],
   "minecraft:basalt": [
