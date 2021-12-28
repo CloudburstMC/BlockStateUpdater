@@ -1,9 +1,10 @@
 package com.nukkitx.blockstateupdater;
 
-import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdater;
 import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+
+import java.util.Map;
 
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
@@ -96,6 +97,12 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
                     helper.replaceWith("name", "minecraft:twisted_vines");
                 });
 
+        // This is not a vanilla state updater. In vanilla 1.16, the invalid block state is updated when the chunk is
+        // loaded in so it can generate the connection data however the state set below should never occur naturally.
+        // Checking for this block state instead means we don't have to break our loading system in order to support it.
+        this.addLegacyWallUpdater(context, "minecraft:.+_wall");
+        this.addLegacyWallUpdater(context, "minecraft:border_block");
+
         this.addWallUpdater(context, "minecraft:blackstone_wall");
         this.addWallUpdater(context, "minecraft:polished_blackstone_brick_wall");
         this.addWallUpdater(context, "minecraft:polished_blackstone_wall");
@@ -105,6 +112,19 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
 
         this.addRequiredValueUpdater(context, "minecraft:pumpkin_stem", "facing_direction", 0);
         this.addRequiredValueUpdater(context, "minecraft:melon_stem", "facing_direction", 0);
+    }
+
+    private void addLegacyWallUpdater(CompoundTagUpdaterContext context, String name) {
+        context.addUpdater(1, 16, 0)
+                .match("name", name)
+                .tryEdit("states", helper -> {
+                    Map<String, Object> states = helper.getCompoundTag();
+                    states.put("wall_post_bit", (byte) 0);
+                    states.put("wall_connection_type_north", "none");
+                    states.put("wall_connection_type_east", "none");
+                    states.put("wall_connection_type_south", "none");
+                    states.put("wall_connection_type_west", "none");
+                });
     }
 
     private void addWallUpdater(CompoundTagUpdaterContext context, String name) {
