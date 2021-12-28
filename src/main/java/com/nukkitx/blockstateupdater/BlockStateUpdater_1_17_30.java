@@ -8,7 +8,7 @@ public class BlockStateUpdater_1_17_30 implements BlockStateUpdater {
 
     @Override
     public void registerUpdaters(CompoundTagUpdaterContext context) {
-        context.addUpdater(1, 16, 210) // Palette version wasn't bumped so far
+        context.addUpdater(1, 16, 210, true) // Palette version wasn't bumped so far
                 .match("name", "minecraft:frame")
                 .visit("states")
                 .tryAdd("item_frame_photo_bit", (byte) 0);
