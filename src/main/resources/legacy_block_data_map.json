@@ -2027,25 +2027,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -2075,7 +2075,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -3005,25 +3005,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -3053,7 +3053,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -4789,25 +4789,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -4837,7 +4837,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -7844,25 +7844,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -7892,7 +7892,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -8038,25 +8038,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8086,7 +8086,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -8232,25 +8232,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8280,7 +8280,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -8426,25 +8426,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8474,7 +8474,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -13363,25 +13363,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13411,7 +13411,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
@@ -13557,25 +13557,25 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
       "direction": 1,
-      "door_hinge_bit": true,
-      "upper_block_bit": false
-    },
-    {
-      "open_bit": false,
-      "direction": 2,
       "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
       "open_bit": false,
-      "direction": 3,
+      "direction": 2,
       "door_hinge_bit": true,
+      "upper_block_bit": false
+    },
+    {
+      "open_bit": false,
+      "direction": 3,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13605,7 +13605,7 @@
     {
       "open_bit": false,
       "direction": 0,
-      "door_hinge_bit": false,
+      "door_hinge_bit": true,
       "upper_block_bit": true
     },
     {
