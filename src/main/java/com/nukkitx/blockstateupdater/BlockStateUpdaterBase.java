@@ -25,7 +25,7 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
         try (InputStream stream = BlockStateUpdater.class.getClassLoader().getResourceAsStream("legacy_block_data_map.json")) {
             node = JSON_MAPPER.readTree(stream);
         } catch (IOException e) {
-            throw new AssertionError("Error loading legacy block data map");
+            throw new AssertionError("Error loading legacy block data map", e);
         }
 
         Iterator<Map.Entry<String, JsonNode>> iterator = node.fields();

@@ -2499,6 +2499,32 @@
       "torch_facing_direction": "unknown"
     }
   ],
+  "minecraft:soul_torch": [
+    {
+      "torch_facing_direction": "unknown"
+    },
+    {
+      "torch_facing_direction": "west"
+    },
+    {
+      "torch_facing_direction": "east"
+    },
+    {
+      "torch_facing_direction": "north"
+    },
+    {
+      "torch_facing_direction": "south"
+    },
+    {
+      "torch_facing_direction": "top"
+    },
+    {
+      "torch_facing_direction": "unknown"
+    },
+    {
+      "torch_facing_direction": "unknown"
+    }
+  ],
   "minecraft:chest": [
     {
       "facing_direction": 0
@@ -9486,6 +9512,40 @@
       "extinguished": true
     }
   ],
+  "minecraft:soul_campfire": [
+    {
+      "direction": 0,
+      "extinguished": false
+    },
+    {
+      "direction": 1,
+      "extinguished": false
+    },
+    {
+      "direction": 2,
+      "extinguished": false
+    },
+    {
+      "direction": 3,
+      "extinguished": false
+    },
+    {
+      "direction": 0,
+      "extinguished": true
+    },
+    {
+      "direction": 1,
+      "extinguished": true
+    },
+    {
+      "direction": 2,
+      "extinguished": true
+    },
+    {
+      "direction": 3,
+      "extinguished": true
+    }
+  ],
   "minecraft:observer": [
     {
       "facing_direction": 0,
@@ -13263,6 +13323,38 @@
       "top_slot_bit": true
     }
   ],
+  "minecraft:blackstone_double_slab": [
+    {
+      "top_slot_bit": false
+    },
+    {
+      "top_slot_bit": true
+    }
+  ],
+  "minecraft:crimson_double_slab": [
+    {
+      "top_slot_bit": false
+    },
+    {
+      "top_slot_bit": true
+    }
+  ],
+  "minecraft:polished_blackstone_brick_double_slab": [
+    {
+      "top_slot_bit": false
+    },
+    {
+      "top_slot_bit": true
+    }
+  ],
+  "minecraft:polished_blackstone_double_slab": [
+    {
+      "top_slot_bit": false
+    },
+    {
+      "top_slot_bit": true
+    }
+  ],
   "minecraft:warped_door": [
     {
       "open_bit": false,
@@ -14269,6 +14361,17 @@
     },
     {
       "twisting_vines_age": 25
+    }
+  ],
+  "minecraft:crimson_hyphae": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
     }
   ],
   "minecraft:stripped_crimson_hyphae": [
