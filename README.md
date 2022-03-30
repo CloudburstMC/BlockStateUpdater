@@ -8,7 +8,7 @@ worlds to the latest version.
 Updating legacy meta values to block states
 
 ```java
-NbtMap updatedTag=BlockStateUpdaters.updateBlockState(NbtMap.builder()
+NbtMap updatedTag = BlockStateUpdaters.updateBlockState(NbtMap.builder()
         .putString("name","minecraft:stone")
         .putShort("val",(short)1)
         .build(),0);
@@ -29,7 +29,7 @@ NbtMap updatedTag=BlockStateUpdaters.updateBlockState(NbtMap.builder()
 <dependency>
     <groupId>com.nukkitx</groupId>
     <artifactId>block-state-updater</artifactId>
-    <version>1.16.210.5</version>
+    <version>1.18.10-SNAPSHOT</version>
 </dependency>
 </dependencies>
 ```
