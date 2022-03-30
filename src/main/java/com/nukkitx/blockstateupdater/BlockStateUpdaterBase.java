@@ -25,7 +25,7 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
         try (InputStream stream = BlockStateUpdater.class.getClassLoader().getResourceAsStream("legacy_block_data_map.json")) {
             node = JSON_MAPPER.readTree(stream);
         } catch (IOException e) {
-            throw new AssertionError("Error loading legacy block data map");
+            throw new AssertionError("Error loading legacy block data map", e);
         }
 
         Iterator<Map.Entry<String, JsonNode>> iterator = node.fields();
@@ -86,24 +86,5 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
                     }
                 })
                 .remove("val");
-
-        // This is not a vanilla state updater. In vanilla 1.16, the invalid block state is updated when the chunk is
-        // loaded in so it can generate the connection data however the state set below should never occur naturally.
-        // Checking for this block state instead means we don't have to break our loading system in order to support it.
-        addWallUpdater(context, "minecraft:.+_wall");
-        addWallUpdater(context, "minecraft:border_block");
-    }
-
-    private static void addWallUpdater(CompoundTagUpdaterContext context, String name) {
-        context.addUpdater(0, 0, 0)
-                .match("name", name)
-                .tryEdit("states", helper -> {
-                    Map<String, Object> states = helper.getCompoundTag();
-                    states.put("wall_post_bit", (byte) 0);
-                    states.put("wall_connection_type_north", "none");
-                    states.put("wall_connection_type_east", "none");
-                    states.put("wall_connection_type_south", "none");
-                    states.put("wall_connection_type_west", "none");
-                });
     }
 }
