@@ -23,13 +23,13 @@ public class BlockStateUpdater_1_18_30 implements BlockStateUpdater {
     }
 
     private void renameIdentifier(CompoundTagUpdaterContext context, String from, String to) {
-        context.addUpdater(1, 18, 10, false) // Here we go again Mojang
+        context.addUpdater(1, 18, 10, true) // Here we go again Mojang
                 .match("name", from)
                 .edit("name", helper -> helper.replaceWith("name", to));
     }
 
     private void addPillarAxis(CompoundTagUpdaterContext context, String from) {
-        context.addUpdater(1, 18, 10, false) // Here we go again Mojang
+        context.addUpdater(1, 18, 10, true) // Here we go again Mojang
                 .match("name", from)
                 .visit("states")
                 .tryAdd("pillar_axis", "y");
