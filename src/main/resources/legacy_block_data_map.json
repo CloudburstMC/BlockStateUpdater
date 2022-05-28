@@ -2057,7 +2057,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -2069,7 +2069,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -3061,7 +3061,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -3073,7 +3073,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -4845,7 +4845,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -4857,7 +4857,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -7900,7 +7900,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -7912,7 +7912,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8094,7 +8094,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8106,7 +8106,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8288,7 +8288,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8300,7 +8300,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8482,7 +8482,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -8494,7 +8494,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13523,7 +13523,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13535,7 +13535,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13717,7 +13717,7 @@
     {
       "open_bit": true,
       "direction": 1,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
@@ -13729,7 +13729,7 @@
     {
       "open_bit": true,
       "direction": 3,
-      "door_hinge_bit": true,
+      "door_hinge_bit": false,
       "upper_block_bit": false
     },
     {
