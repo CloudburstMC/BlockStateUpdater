@@ -22,13 +22,13 @@ public class BlockStateUpdater_1_19_0 implements BlockStateUpdater {
     }
 
     private void renameIdentifier(CompoundTagUpdaterContext context, String from, String to) {
-        context.addUpdater(1, 19, 0, true) // Here we go again Mojang
+        context.addUpdater(1, 18, 10, true) // Here we go again Mojang
                 .match("name", from)
                 .edit("name", helper -> helper.replaceWith("name", to));
     }
 
     private void addProperty(CompoundTagUpdaterContext context, String identifier, String propertyName, Object value) {
-        context.addUpdater(1, 19, 0, true) // Here we go again Mojang
+        context.addUpdater(1, 18, 10, true) // Here we go again Mojang
                 .match("name", identifier)
                 .visit("states")
                 .tryAdd(propertyName, value);
