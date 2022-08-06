@@ -14560,5 +14560,1449 @@
       "facing_direction": 7,
       "button_pressed_bit": true
     }
+  ],
+  "minecraft:deepslate": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
+    }
+  ],
+  "minecraft:infested_deepslate": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
+    }
+  ],
+  "minecraft:glow_frame": [
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 5
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 4
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 3
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 2
+    },
+    {
+      "item_frame_map_bit": true,
+      "facing_direction": 5
+    },
+    {
+      "item_frame_map_bit": true,
+      "facing_direction": 4
+    },
+    {
+      "item_frame_map_bit": true,
+      "facing_direction": 3
+    },
+    {
+      "item_frame_map_bit": true,
+      "facing_direction": 2
+    }
+  ],
+  "minecraft:big_dripleaf": [
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": false,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": false,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": false,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": false,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": true,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": true,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": true,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": true,
+      "direction": 0
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": false,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": false,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": false,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": false,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": true,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": true,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": true,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": true,
+      "direction": 1
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": false,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": false,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": false,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": false,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": true,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": true,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": true,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": true,
+      "direction": 2
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": false,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": false,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": false,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": false,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "none",
+      "big_dripleaf_head": true,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "unstable",
+      "big_dripleaf_head": true,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "partial_tilt",
+      "big_dripleaf_head": true,
+      "direction": 3
+    },
+    {
+      "big_dripleaf_tilt": "full_tilt",
+      "big_dripleaf_head": true,
+      "direction": 3
+    }
+  ],
+  "minecraft:small_dripleaf_block": [
+    {
+      "upper_block_bit": false,
+      "direction": 0
+    },
+    {
+      "upper_block_bit": true,
+      "direction": 0
+    },
+    {
+      "upper_block_bit": false,
+      "direction": 1
+    },
+    {
+      "upper_block_bit": true,
+      "direction": 1
+    },
+    {
+      "upper_block_bit": false,
+      "direction": 2
+    },
+    {
+      "upper_block_bit": true,
+      "direction": 2
+    },
+    {
+      "upper_block_bit": false,
+      "direction": 3
+    },
+    {
+      "upper_block_bit": true,
+      "direction": 3
+    }
+  ],
+  "minecraft:small_amethyst_bud": [
+    {
+      "facing_direction": 0
+    },
+    {
+      "facing_direction": 1
+    },
+    {
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
+    }
+  ],
+  "minecraft:medium_amethyst_bud": [
+    {
+      "facing_direction": 0
+    },
+    {
+      "facing_direction": 1
+    },
+    {
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
+    }
+  ],
+  "minecraft:large_amethyst_bud": [
+    {
+      "facing_direction": 0
+    },
+    {
+      "facing_direction": 1
+    },
+    {
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
+    }
+  ],
+  "minecraft:amethyst_cluster": [
+    {
+      "facing_direction": 0
+    },
+    {
+      "facing_direction": 1
+    },
+    {
+      "facing_direction": 2
+    },
+    {
+      "facing_direction": 3
+    },
+    {
+      "facing_direction": 4
+    },
+    {
+      "facing_direction": 5
+    }
+  ],
+  "minecraft:cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:exposed_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:weathered_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:oxidized_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:waxed_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:waxed_exposed_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:waxed_weathered_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:cobbled_deepslate_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:polished_deepslate_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:deepslate_tile_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:deepslate_brick_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:waxed_oxidized_cut_copper_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:exposed_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:weathered_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:oxidized_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_exposed_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_weathered_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:exposed_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:weathered_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:oxidized_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_exposed_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_weathered_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:cobbled_deepslate_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:polished_deepslate_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:deepslate_tile_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:deepslate_brick_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:cobbled_deepslate_double_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:polished_deepslate_double_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:deepslate_tile_double_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:deepslate_brick_double_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_oxidized_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:waxed_oxidized_double_cut_copper_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:cave_vines": [
+    {
+      "growing_plant_age": 0
+    },
+    {
+      "growing_plant_age": 1
+    },
+    {
+      "growing_plant_age": 2
+    },
+    {
+      "growing_plant_age": 3
+    },
+    {
+      "growing_plant_age": 4
+    },
+    {
+      "growing_plant_age": 5
+    },
+    {
+      "growing_plant_age": 6
+    },
+    {
+      "growing_plant_age": 7
+    },
+    {
+      "growing_plant_age": 8
+    },
+    {
+      "growing_plant_age": 9
+    },
+    {
+      "growing_plant_age": 10
+    },
+    {
+      "growing_plant_age": 11
+    },
+    {
+      "growing_plant_age": 12
+    },
+    {
+      "growing_plant_age": 13
+    },
+    {
+      "growing_plant_age": 14
+    },
+    {
+      "growing_plant_age": 15
+    },
+    {
+      "growing_plant_age": 16
+    },
+    {
+      "growing_plant_age": 17
+    },
+    {
+      "growing_plant_age": 18
+    },
+    {
+      "growing_plant_age": 19
+    },
+    {
+      "growing_plant_age": 20
+    },
+    {
+      "growing_plant_age": 21
+    },
+    {
+      "growing_plant_age": 22
+    },
+    {
+      "growing_plant_age": 23
+    },
+    {
+      "growing_plant_age": 24
+    },
+    {
+      "growing_plant_age": 25
+    }
+  ],
+  "minecraft:cave_vines_body_with_berries": [
+    {
+      "growing_plant_age": 0
+    },
+    {
+      "growing_plant_age": 1
+    },
+    {
+      "growing_plant_age": 2
+    },
+    {
+      "growing_plant_age": 3
+    },
+    {
+      "growing_plant_age": 4
+    },
+    {
+      "growing_plant_age": 5
+    },
+    {
+      "growing_plant_age": 6
+    },
+    {
+      "growing_plant_age": 7
+    },
+    {
+      "growing_plant_age": 8
+    },
+    {
+      "growing_plant_age": 9
+    },
+    {
+      "growing_plant_age": 10
+    },
+    {
+      "growing_plant_age": 11
+    },
+    {
+      "growing_plant_age": 12
+    },
+    {
+      "growing_plant_age": 13
+    },
+    {
+      "growing_plant_age": 14
+    },
+    {
+      "growing_plant_age": 15
+    },
+    {
+      "growing_plant_age": 16
+    },
+    {
+      "growing_plant_age": 17
+    },
+    {
+      "growing_plant_age": 18
+    },
+    {
+      "growing_plant_age": 19
+    },
+    {
+      "growing_plant_age": 20
+    },
+    {
+      "growing_plant_age": 21
+    },
+    {
+      "growing_plant_age": 22
+    },
+    {
+      "growing_plant_age": 23
+    },
+    {
+      "growing_plant_age": 24
+    },
+    {
+      "growing_plant_age": 25
+    }
+  ],
+  "minecraft:cave_vines_head_with_berries": [
+    {
+      "growing_plant_age": 0
+    },
+    {
+      "growing_plant_age": 1
+    },
+    {
+      "growing_plant_age": 2
+    },
+    {
+      "growing_plant_age": 3
+    },
+    {
+      "growing_plant_age": 4
+    },
+    {
+      "growing_plant_age": 5
+    },
+    {
+      "growing_plant_age": 6
+    },
+    {
+      "growing_plant_age": 7
+    },
+    {
+      "growing_plant_age": 8
+    },
+    {
+      "growing_plant_age": 9
+    },
+    {
+      "growing_plant_age": 10
+    },
+    {
+      "growing_plant_age": 11
+    },
+    {
+      "growing_plant_age": 12
+    },
+    {
+      "growing_plant_age": 13
+    },
+    {
+      "growing_plant_age": 14
+    },
+    {
+      "growing_plant_age": 15
+    },
+    {
+      "growing_plant_age": 16
+    },
+    {
+      "growing_plant_age": 17
+    },
+    {
+      "growing_plant_age": 18
+    },
+    {
+      "growing_plant_age": 19
+    },
+    {
+      "growing_plant_age": 20
+    },
+    {
+      "growing_plant_age": 21
+    },
+    {
+      "growing_plant_age": 22
+    },
+    {
+      "growing_plant_age": 23
+    },
+    {
+      "growing_plant_age": 24
+    },
+    {
+      "growing_plant_age": 25
+    }
+  ],
+  "minecraft:azalea_leaves": [
+    {
+      "persistent_bit": false,
+      "update_bit": false
+    },
+    {
+      "persistent_bit": false,
+      "update_bit": true
+    },
+    {
+      "persistent_bit": true,
+      "update_bit": false
+    },
+    {
+      "persistent_bit": true,
+      "update_bit": true
+    }
+  ],
+  "minecraft:azalea_leaves_flowered": [
+    {
+      "persistent_bit": false,
+      "update_bit": false
+    },
+    {
+      "persistent_bit": false,
+      "update_bit": true
+    },
+    {
+      "persistent_bit": true,
+      "update_bit": false
+    },
+    {
+      "persistent_bit": true,
+      "update_bit": true
+    }
+  ],
+  "minecraft:glow_lichen": [
+    {
+      "multi_face_direction_bits": 0
+    },
+    {
+      "multi_face_direction_bits": 1
+    },
+    {
+      "multi_face_direction_bits": 2
+    },
+    {
+      "multi_face_direction_bits": 3
+    },
+    {
+      "multi_face_direction_bits": 4
+    },
+    {
+      "multi_face_direction_bits": 5
+    },
+    {
+      "multi_face_direction_bits": 6
+    },
+    {
+      "multi_face_direction_bits": 7
+    },
+    {
+      "multi_face_direction_bits": 8
+    },
+    {
+      "multi_face_direction_bits": 9
+    },
+    {
+      "multi_face_direction_bits": 10
+    },
+    {
+      "multi_face_direction_bits": 11
+    },
+    {
+      "multi_face_direction_bits": 12
+    },
+    {
+      "multi_face_direction_bits": 13
+    },
+    {
+      "multi_face_direction_bits": 14
+    },
+    {
+      "multi_face_direction_bits": 15
+    },
+    {
+      "multi_face_direction_bits": 16
+    },
+    {
+      "multi_face_direction_bits": 17
+    },
+    {
+      "multi_face_direction_bits": 18
+    },
+    {
+      "multi_face_direction_bits": 19
+    },
+    {
+      "multi_face_direction_bits": 20
+    },
+    {
+      "multi_face_direction_bits": 21
+    },
+    {
+      "multi_face_direction_bits": 22
+    },
+    {
+      "multi_face_direction_bits": 23
+    },
+    {
+      "multi_face_direction_bits": 24
+    },
+    {
+      "multi_face_direction_bits": 25
+    },
+    {
+      "multi_face_direction_bits": 26
+    },
+    {
+      "multi_face_direction_bits": 27
+    },
+    {
+      "multi_face_direction_bits": 28
+    },
+    {
+      "multi_face_direction_bits": 29
+    },
+    {
+      "multi_face_direction_bits": 30
+    },
+    {
+      "multi_face_direction_bits": 31
+    },
+    {
+      "multi_face_direction_bits": 32
+    },
+    {
+      "multi_face_direction_bits": 33
+    },
+    {
+      "multi_face_direction_bits": 34
+    },
+    {
+      "multi_face_direction_bits": 35
+    },
+    {
+      "multi_face_direction_bits": 36
+    },
+    {
+      "multi_face_direction_bits": 37
+    },
+    {
+      "multi_face_direction_bits": 38
+    },
+    {
+      "multi_face_direction_bits": 39
+    },
+    {
+      "multi_face_direction_bits": 40
+    },
+    {
+      "multi_face_direction_bits": 41
+    },
+    {
+      "multi_face_direction_bits": 42
+    },
+    {
+      "multi_face_direction_bits": 43
+    },
+    {
+      "multi_face_direction_bits": 44
+    },
+    {
+      "multi_face_direction_bits": 45
+    },
+    {
+      "multi_face_direction_bits": 46
+    },
+    {
+      "multi_face_direction_bits": 47
+    },
+    {
+      "multi_face_direction_bits": 48
+    },
+    {
+      "multi_face_direction_bits": 49
+    },
+    {
+      "multi_face_direction_bits": 50
+    },
+    {
+      "multi_face_direction_bits": 51
+    },
+    {
+      "multi_face_direction_bits": 52
+    },
+    {
+      "multi_face_direction_bits": 53
+    },
+    {
+      "multi_face_direction_bits": 54
+    },
+    {
+      "multi_face_direction_bits": 55
+    },
+    {
+      "multi_face_direction_bits": 56
+    },
+    {
+      "multi_face_direction_bits": 57
+    },
+    {
+      "multi_face_direction_bits": 58
+    },
+    {
+      "multi_face_direction_bits": 59
+    },
+    {
+      "multi_face_direction_bits": 60
+    },
+    {
+      "multi_face_direction_bits": 61
+    },
+    {
+      "multi_face_direction_bits": 62
+    },
+    {
+      "multi_face_direction_bits": 63
+    }
+  ],
+  "minecraft:pointed_dripstone": [
+    {
+      "hanging": false,
+      "dripstone_thickness": "tip"
+    },
+    {
+      "hanging": true,
+      "dripstone_thickness": "tip"
+    },
+    {
+      "hanging": false,
+      "dripstone_thickness": "frustum"
+    },
+    {
+      "hanging": true,
+      "dripstone_thickness": "frustum"
+    },
+    {
+      "hanging": false,
+      "dripstone_thickness": "middle"
+    },
+    {
+      "hanging": true,
+      "dripstone_thickness": "middle"
+    },
+    {
+      "hanging": false,
+      "dripstone_thickness": "base"
+    },
+    {
+      "hanging": true,
+      "dripstone_thickness": "base"
+    },
+    {
+      "hanging": false,
+      "dripstone_thickness": "merge"
+    },
+    {
+      "hanging": true,
+      "dripstone_thickness": "merge"
+    }
   ]
 }
