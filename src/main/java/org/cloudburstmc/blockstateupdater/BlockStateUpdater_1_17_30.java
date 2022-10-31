@@ -1,6 +1,6 @@
-package com.nukkitx.blockstateupdater;
+package org.cloudburstmc.blockstateupdater;
 
-import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
+import org.cloudburstmc.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 
 public class BlockStateUpdater_1_17_30 implements BlockStateUpdater {
 

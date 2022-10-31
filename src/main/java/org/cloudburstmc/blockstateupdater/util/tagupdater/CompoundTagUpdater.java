@@ -1,4 +1,4 @@
-package com.nukkitx.blockstateupdater.util.tagupdater;
+package org.cloudburstmc.blockstateupdater.util.tagupdater;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;

@@ -1,4 +1,4 @@
-package com.nukkitx.blockstateupdater.util;
+package org.cloudburstmc.blockstateupdater.util;
 
 import org.cloudburstmc.nbt.NbtList;
 import org.cloudburstmc.nbt.NbtMap;

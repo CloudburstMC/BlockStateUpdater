@@ -1,6 +1,6 @@
-package com.nukkitx.blockstateupdater;
+package org.cloudburstmc.blockstateupdater;
 
-import com.nukkitx.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
+import org.cloudburstmc.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 

@@ -1,4 +1,4 @@
-package com.nukkitx.blockstateupdater.util.tagupdater;
+package org.cloudburstmc.blockstateupdater.util.tagupdater;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
