@@ -6,7 +6,7 @@
 
     <groupId>org.cloudburstmc</groupId>
     <artifactId>block-state-updater</artifactId>
-    <version>1.19.20-SNAPSHOT</version>
+    <version>1.19.70-SNAPSHOT</version>
     <name>BlockStateUpdater</name>
     <description>Updates Minecraft: Bedrock Edition block states to the latest revision</description>
     <inceptionYear>2020</inceptionYear>

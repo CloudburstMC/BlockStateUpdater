@@ -27,9 +27,9 @@ NbtMap updatedTag = BlockStateUpdaters.updateBlockState(NbtMap.builder()
 
 <dependencies>
 <dependency>
-    <groupId>com.nukkitx</groupId>
+    <groupId>org.cloudburstmc</groupId>
     <artifactId>block-state-updater</artifactId>
-    <version>1.18.10-SNAPSHOT</version>
+    <version>1.19.70-SNAPSHOT</version>
 </dependency>
 </dependencies>
 ```
