@@ -29,8 +29,10 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
             return String.valueOf(tag);
         } else if (tag instanceof String) {
             return (String) tag;
+        } else if (tag instanceof Boolean) {
+            return tag == Boolean.TRUE ? "1" : "0";
         }
-        throw new IllegalArgumentException("Invalid tag");
+        throw new IllegalArgumentException("Invalid tag " + tag.getClass().getSimpleName());
     }
 
     public int getVersion() {
