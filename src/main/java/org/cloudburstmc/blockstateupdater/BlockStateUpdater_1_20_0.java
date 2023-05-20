@@ -54,7 +54,12 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
                 .match("name", "minecraft:calibrated_sculk_sensor")
                 .visit("states")
                 .edit("powered_bit", helper -> {
-                    int value = (int) helper.getTag();
+                    int value;
+                    if (helper.getTag() instanceof Byte) {
+                        value = (byte) helper.getTag();
+                    } else {
+                        value = (int) helper.getTag();
+                    }
                     helper.replaceWith("sculk_sensor_phase", value);
                 });
 
@@ -62,7 +67,12 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
                 .match("name", "minecraft:sculk_sensor")
                 .visit("states")
                 .edit("powered_bit", helper -> {
-                    int value = (int) helper.getTag();
+                    int value;
+                    if (helper.getTag() instanceof Byte) {
+                        value = (byte) helper.getTag();
+                    } else {
+                        value = (int) helper.getTag();
+                    }
                     helper.replaceWith("sculk_sensor_phase", value);
                 });
 
