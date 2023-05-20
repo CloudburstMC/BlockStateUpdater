@@ -17,7 +17,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", name)
                 .visit("states")
-                .match("direction", "[0-2]")
+                .regex("direction", "[0-2]")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
                     helper.replaceWith("pillar_axis", PILLAR_DIRECTION[value % 3]);
@@ -26,7 +26,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", name)
                 .visit("states")
-                .match("direction", "[3]")
+                .regex("direction", "[3]")
                 .rename(replace, "wood_type")
                 .edit("direction", helper -> {
                     int value = (int) helper.getTag();
@@ -84,14 +84,14 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
         context.addUpdater(1, 13, 0)
                 .match("name", "minecraft:end_rod")
                 .visit("states")
-                .match("facing_direction", "[^0-5]")
+                .regex("facing_direction", "[^0-5]")
                 .remove("facing_direction")
                 .addInt("block_light_level", 14)
                 .popVisit()
                 .edit("name", helper -> helper.replaceWith("name", "minecraft:light_block"));
 
         context.addUpdater(1, 13, 0)
-                .match("name", "minecraft:.+")
+                .regex("name", "minecraft:.+")
                 .visit("states")
                 .edit("facing_direction", helper -> {
                     int value = (int) helper.getTag();
@@ -101,7 +101,7 @@ public class BlockStateUpdater_1_13_0 implements BlockStateUpdater {
                 });
 
         context.addUpdater(1, 13, 0)
-                .match("name", "minecraft:.+")
+                .regex("name", "minecraft:.+")
                 .visit("states")
                 .edit("fill_level", helper -> {
                     int value = (int) helper.getTag();

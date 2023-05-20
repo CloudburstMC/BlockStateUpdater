@@ -116,7 +116,7 @@ public class BlockStateUpdater_1_16_0 implements BlockStateUpdater {
 
     private void addLegacyWallUpdater(CompoundTagUpdaterContext context, String name) {
         context.addUpdater(1, 16, 0)
-                .match("name", name)
+                .regex("name", name)
                 .tryEdit("states", helper -> {
                     Map<String, Object> states = helper.getCompoundTag();
                     states.put("wall_post_bit", (byte) 0);

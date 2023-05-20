@@ -71,8 +71,8 @@ public class BlockStateUpdaterBase implements BlockStateUpdater {
     @Override
     public void registerUpdaters(CompoundTagUpdaterContext context) {
         context.addUpdater(0, 0, 0)
-                .match("name", "minecraft:.+")
-                .match("val", "[0-9]+")
+                .regex("name", "minecraft:.+")
+                .regex("val", "[0-9]+")
                 .addCompound("states")
                 .tryEdit("states", helper -> {
                     Map<String, Object> tag = helper.getCompoundTag();

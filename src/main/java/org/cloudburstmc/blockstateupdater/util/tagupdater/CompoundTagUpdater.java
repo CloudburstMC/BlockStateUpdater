@@ -124,8 +124,17 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
             return this;
         }
 
-        public Builder match(String name, String regex) {
-            Pattern pattern = Pattern.compile(regex);
+        public Builder regex(String name, String regex) {
+            return this.match(name, regex, true);
+        }
+
+        public Builder match(String name, String match) {
+            return this.match(name, match, false);
+        }
+
+        public Builder match(String name, String match, boolean regex) {
+            Pattern pattern = regex ? Pattern.compile(match) : null;
+
             CompoundTagUpdater.this.filters.add(helper -> {
                 Object tag = helper.getTag();
                 if (!(tag instanceof Map)) {
@@ -136,12 +145,18 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
                     return false;
                 }
 
-                boolean match = regex.isEmpty();
-                if (!match) {
-                    Object matchTag = compound.get(name);
-                    match = pattern.matcher(getTagValue(matchTag)).matches();
+                boolean success = match.isEmpty();
+                if (success) {
+                    return success;
                 }
-                return match;
+
+                Object matchTag = compound.get(name);
+                if (regex) {
+                    success = pattern.matcher(getTagValue(matchTag)).matches();
+                } else {
+                    success = match.equals(getTagValue(matchTag));
+                }
+                return success;
             });
             return this;
         }
