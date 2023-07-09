@@ -28,13 +28,19 @@ java {
     }
 }
 
+tasks.jar {
+    manifest {
+        attributes("Automatic-Module-Name" to "org.cloudburstmc.blockstateupdater")
+    }
+}
+
 publishing {
     repositories {
         maven {
             name = "maven-deploy"
             url = uri(
-                System.getenv("MAVEN_DEPLOY_URL")
-                    ?: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+                    System.getenv("MAVEN_DEPLOY_URL")
+                            ?: "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
             )
             credentials {
                 username = System.getenv("MAVEN_DEPLOY_USERNAME") ?: "username"
