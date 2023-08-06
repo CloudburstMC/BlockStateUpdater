@@ -12434,6 +12434,106 @@
       "ground_sign_direction": 15
     }
   ],
+  "minecraft:warped_pressure_plate": [
+    {
+      "redstone_signal": 0
+    },
+    {
+      "redstone_signal": 1
+    },
+    {
+      "redstone_signal": 2
+    },
+    {
+      "redstone_signal": 3
+    },
+    {
+      "redstone_signal": 4
+    },
+    {
+      "redstone_signal": 5
+    },
+    {
+      "redstone_signal": 6
+    },
+    {
+      "redstone_signal": 7
+    },
+    {
+      "redstone_signal": 8
+    },
+    {
+      "redstone_signal": 9
+    },
+    {
+      "redstone_signal": 10
+    },
+    {
+      "redstone_signal": 11
+    },
+    {
+      "redstone_signal": 12
+    },
+    {
+      "redstone_signal": 13
+    },
+    {
+      "redstone_signal": 14
+    },
+    {
+      "redstone_signal": 15
+    }
+  ],
+  "minecraft:crimson_pressure_plate": [
+    {
+      "redstone_signal": 0
+    },
+    {
+      "redstone_signal": 1
+    },
+    {
+      "redstone_signal": 2
+    },
+    {
+      "redstone_signal": 3
+    },
+    {
+      "redstone_signal": 4
+    },
+    {
+      "redstone_signal": 5
+    },
+    {
+      "redstone_signal": 6
+    },
+    {
+      "redstone_signal": 7
+    },
+    {
+      "redstone_signal": 8
+    },
+    {
+      "redstone_signal": 9
+    },
+    {
+      "redstone_signal": 10
+    },
+    {
+      "redstone_signal": 11
+    },
+    {
+      "redstone_signal": 12
+    },
+    {
+      "redstone_signal": 13
+    },
+    {
+      "redstone_signal": 14
+    },
+    {
+      "redstone_signal": 15
+    }
+  ],
   "minecraft:lectern": [
     {
       "direction": 0,
