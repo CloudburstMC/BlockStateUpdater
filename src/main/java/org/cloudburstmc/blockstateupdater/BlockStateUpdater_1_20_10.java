@@ -1,5 +1,6 @@
 package org.cloudburstmc.blockstateupdater;
 
+import org.cloudburstmc.blockstateupdater.util.OrderedUpdater;
 import org.cloudburstmc.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 
 public class BlockStateUpdater_1_20_10 implements BlockStateUpdater {
@@ -25,14 +26,13 @@ public class BlockStateUpdater_1_20_10 implements BlockStateUpdater {
             "silver"
     };
 
-    public static final String[] DIRECTIONS = {
-            "east",
-            "south",
-            "north",
-            "west",
-            "up",
-            "down"
-    };
+    /**
+     * Literally the only block as of 1.20.30 that uses "minecraft:facing_direction"...
+     * Seems equivalent to "minecraft:block_face"
+     */
+    public static final OrderedUpdater OBSERVER_DIRECTIONS = new OrderedUpdater(
+        "facing_direction", "minecraft:facing_direction",
+        "down", "up", "north", "south", "west", "east");
 
     @Override
     public void registerUpdaters(CompoundTagUpdaterContext ctx) {
@@ -63,9 +63,9 @@ public class BlockStateUpdater_1_20_10 implements BlockStateUpdater {
         ctx.addUpdater(1, 20, 10)
                 .match("name", identifier)
                 .visit("states")
-                .edit("facing_direction", helper -> {
+                .edit(OBSERVER_DIRECTIONS.getOldProperty(), helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("minecraft:facing_direction", DIRECTIONS[value & 5]); // Don't ask me why namespace is in vanilla state
+                    helper.replaceWith(OBSERVER_DIRECTIONS.getNewProperty(), OBSERVER_DIRECTIONS.translate(value)); // Don't ask me why namespace is in vanilla state
                 });
     }
 }

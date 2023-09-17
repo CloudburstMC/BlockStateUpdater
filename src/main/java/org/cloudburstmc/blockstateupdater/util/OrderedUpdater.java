@@ -7,6 +7,18 @@ import lombok.Getter;
  */
 public class OrderedUpdater {
 
+    public static final OrderedUpdater FACING_TO_BLOCK = new OrderedUpdater(
+        "facing_direction", "minecraft:block_face",
+        "down", "up", "north", "south", "west", "east");
+
+    public static final OrderedUpdater FACING_TO_CARDINAL = new OrderedUpdater(
+        "facing_direction", "minecraft:cardinal_direction", 2,
+        "north", "south", "west", "east");
+
+    public static final OrderedUpdater DIRECTION_TO_CARDINAL = new OrderedUpdater(
+        "direction", "minecraft:cardinal_direction",
+        "south", "west", "north", "east");
+
     @Getter
     private final String oldProperty;
     @Getter

@@ -1,5 +1,6 @@
 package org.cloudburstmc.blockstateupdater;
 
+import org.cloudburstmc.blockstateupdater.util.OrderedUpdater;
 import org.cloudburstmc.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 
 import java.util.Map;
@@ -25,13 +26,6 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
             "blue",
             "purple",
             "silver"
-    };
-
-    public static final String[] DIRECTIONS = {
-            "east",
-            "south",
-            "north",
-            "west"
     };
 
     @Override
@@ -96,12 +90,13 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
     }
 
     private void addPumpkinUpdater(CompoundTagUpdaterContext ctx, String identifier) {
+        OrderedUpdater updater = OrderedUpdater.DIRECTION_TO_CARDINAL;
         ctx.addUpdater(1, 20, 0)
                 .match("name", identifier)
                 .visit("states")
-                .edit("direction", helper -> {
+                .edit(updater.getOldProperty(), helper -> {
                     int value = (int) helper.getTag();
-                    helper.replaceWith("minecraft:cardinal_direction", DIRECTIONS[value & 3]); // Don't ask me why namespace is in vanilla state
+                    helper.replaceWith(updater.getNewProperty(), updater.translate(value)); // Don't ask me why namespace is in vanilla state
                 });
     }
 
