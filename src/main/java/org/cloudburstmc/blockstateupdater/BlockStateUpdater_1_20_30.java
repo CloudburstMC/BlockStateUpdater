@@ -3,6 +3,10 @@ package org.cloudburstmc.blockstateupdater;
 import org.cloudburstmc.blockstateupdater.util.OrderedUpdater;
 import org.cloudburstmc.blockstateupdater.util.tagupdater.CompoundTagUpdaterContext;
 
+import static org.cloudburstmc.blockstateupdater.util.OrderedUpdater.DIRECTION_TO_CARDINAL;
+import static org.cloudburstmc.blockstateupdater.util.OrderedUpdater.FACING_TO_BLOCK;
+import static org.cloudburstmc.blockstateupdater.util.OrderedUpdater.FACING_TO_CARDINAL;
+
 public class BlockStateUpdater_1_20_30 implements BlockStateUpdater {
 
     public static final BlockStateUpdater INSTANCE = new BlockStateUpdater_1_20_30();
@@ -25,18 +29,6 @@ public class BlockStateUpdater_1_20_30 implements BlockStateUpdater {
             "purple",
             "silver"
     };
-
-    public static final OrderedUpdater FACING_TO_BLOCK = new OrderedUpdater(
-        "facing_direction", "minecraft:block_face",
-        "down", "up", "north", "south", "west", "east");
-
-    public static final OrderedUpdater FACING_TO_CARDINAL = new OrderedUpdater(
-        "facing_direction", "minecraft:cardinal_direction", 2,
-        "north", "south", "west", "east");
-
-    public static final OrderedUpdater DIRECTION_TO_CARDINAL = new OrderedUpdater(
-        "direction", "minecraft:cardinal_direction",
-        "south", "west", "north", "east");
 
     @Override
     public void registerUpdaters(CompoundTagUpdaterContext ctx) {
