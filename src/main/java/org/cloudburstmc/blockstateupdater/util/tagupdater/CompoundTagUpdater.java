@@ -39,11 +39,11 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
         return version;
     }
 
-    public void update(Map<String, Object> tag) {
+    public boolean update(Map<String, Object> tag) {
         CompoundTagEditHelper filterHelper = new CompoundTagEditHelper(tag);
         for (Predicate<CompoundTagEditHelper> filter : this.filters) {
             if (!filter.test(filterHelper)) {
-                return;
+                return false;
             }
         }
 
@@ -51,6 +51,7 @@ public class CompoundTagUpdater implements Comparable<CompoundTagUpdater> {
         for (Consumer<CompoundTagEditHelper> updater : this.updaters) {
             updater.accept(updaterHelper);
         }
+        return true;
     }
 
     Builder builder() {
