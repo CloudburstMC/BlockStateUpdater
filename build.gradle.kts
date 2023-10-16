@@ -4,7 +4,7 @@ plugins {
     id("signing")
 }
 
-version = "1.20.30-SNAPSHOT"
+version = "1.20.40-SNAPSHOT"
 group = "org.cloudburstmc"
 description = "Updates Minecraft: Bedrock Edition block states to the latest revision"
 
