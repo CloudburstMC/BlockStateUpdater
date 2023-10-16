@@ -16104,5 +16104,505 @@
       "hanging": true,
       "dripstone_thickness": "merge"
     }
+  ],
+  "minecraft:mud_brick_double_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:mud_brick_slab": [
+    {
+      "top_slot_bit": true
+    },
+    {
+      "top_slot_bit": false
+    }
+  ],
+  "minecraft:mud_brick_stairs": [
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": false
+    },
+    {
+      "weirdo_direction": 0,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 1,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 2,
+      "upside_down_bit": true
+    },
+    {
+      "weirdo_direction": 3,
+      "upside_down_bit": true
+    }
+  ],
+  "minecraft:polished_blackstone_wall": [
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "short",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "tall",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "short",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "tall",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "short",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "tall",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    },
+    {
+      "wall_connection_type_south": "none",
+      "wall_connection_type_west": "none",
+      "wall_connection_type_north": "none",
+      "wall_connection_type_east": "none",
+      "wall_post_bit": false
+    }
   ]
 }
