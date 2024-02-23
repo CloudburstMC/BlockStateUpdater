@@ -557,6 +557,202 @@
       "stability_check": true
     }
   ],
+  "minecraft:beehive": [
+    {
+      "facing_direction": 3,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 5
+    }
+  ],
+  "minecraft:bee_nest": [
+    {
+      "facing_direction": 3,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 0
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 1
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 2
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 3
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 4
+    },
+    {
+      "facing_direction": 3,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 4,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 2,
+      "honey_level": 5
+    },
+    {
+      "facing_direction": 5,
+      "honey_level": 5
+    }
+  ],
   "minecraft:beetroot": [
     {
       "growth": 0
