@@ -26,8 +26,9 @@ public class BlockStateUpdater_1_20_80 implements BlockStateUpdater {
                 case "houstonia":
                     return "minecraft:azure_bluet";
                 case "tulip_red":
-                default:
                     return "minecraft:red_tulip";
+                default:
+                    return "minecraft:" + type;
             }
         });
 
