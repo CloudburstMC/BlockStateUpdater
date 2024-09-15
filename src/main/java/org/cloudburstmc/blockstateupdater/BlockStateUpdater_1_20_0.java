@@ -44,6 +44,12 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
         this.addCoralUpdater(ctx,  "yellow", "minecraft:horn_coral");
         this.addCoralUpdater(ctx,  "purple", "minecraft:bubble_coral");
 
+        this.addDeadCoralUpdater(ctx,  "red", "minecraft:dead_fire_coral");
+        this.addDeadCoralUpdater(ctx,  "pink", "minecraft:dead_brain_coral");
+        this.addDeadCoralUpdater(ctx,  "blue", "minecraft:dead_tube_coral");
+        this.addDeadCoralUpdater(ctx,  "yellow", "minecraft:dead_horn_coral");
+        this.addDeadCoralUpdater(ctx,  "purple", "minecraft:dead_bubble_coral");
+
         ctx.addUpdater(1, 20, 0)
                 .match("name", "minecraft:calibrated_sculk_sensor")
                 .visit("states")
@@ -114,7 +120,6 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
     }
 
     private void addCoralUpdater(CompoundTagUpdaterContext context, String type, String newIdentifier) {
-        // Two updates to match final version
         context.addUpdater(1, 20, 0)
                 .match("name", "minecraft:coral")
                 .visit("states")
@@ -123,7 +128,9 @@ public class BlockStateUpdater_1_20_0 implements BlockStateUpdater {
                 .edit("coral_color", helper -> helper.getRootTag().put("name", newIdentifier))
                 .remove("coral_color")
                 .remove("dead_bit");
+    }
 
+    private void addDeadCoralUpdater(CompoundTagUpdaterContext context, String type, String newIdentifier) {
         context.addUpdater(1, 20, 0)
                 .match("name", "minecraft:coral")
                 .visit("states")
