@@ -39,6 +39,8 @@ public class BlockStateUpdater_1_21_30 implements BlockStateUpdater {
                     return "minecraft:brick_wall";
                 case "andesite":
                     return "minecraft:andesite_wall";
+                case "diorite":
+                    return "minecraft:diorite_wall";
                 case "cobblestone":
                 default:
                     return "minecraft:cobblestone_wall";
