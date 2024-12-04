@@ -8838,6 +8838,14 @@
     {
       "item_frame_map_bit": true,
       "weirdo_direction": 3
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 0
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 1
     }
   ],
   "minecraft:colored_torch_bp": [
@@ -14911,6 +14919,14 @@
     {
       "item_frame_map_bit": true,
       "facing_direction": 2
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 0
+    },
+    {
+      "item_frame_map_bit": false,
+      "facing_direction": 1
     }
   ],
   "minecraft:big_dripleaf": [
@@ -18789,6 +18805,39 @@
     },
     {
       "huge_mushroom_bits": 15
+    }
+  ],
+  "minecraft:ochre_froglight": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
+    }
+  ],
+  "minecraft:pearlescent_froglight": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
+    }
+  ],
+  "minecraft:verdant_froglight": [
+    {
+      "pillar_axis": "y"
+    },
+    {
+      "pillar_axis": "x"
+    },
+    {
+      "pillar_axis": "z"
     }
   ]
 }
