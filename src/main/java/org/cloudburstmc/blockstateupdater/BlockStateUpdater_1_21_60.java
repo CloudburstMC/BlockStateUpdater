@@ -49,9 +49,9 @@ public class BlockStateUpdater_1_21_60 implements BlockStateUpdater {
 
         ctx.addUpdater(1, 21, 60)
                 .match("name", "minecraft:creaking_heart")
-                .edit("states", helper -> {
-                    Map<String, Object> states = helper.getCompoundTag();
-                    Object bit = states.remove("active");
+                .visit("states")
+                .tryEdit("active", helper -> {
+                    Object bit = helper.getTag();
                     boolean active = bit instanceof Byte && (byte) bit == 1 || bit instanceof Boolean && (boolean) bit;
                     helper.replaceWith("creaking_heart_state", active ? "awake" : "uprooted");
                 });
